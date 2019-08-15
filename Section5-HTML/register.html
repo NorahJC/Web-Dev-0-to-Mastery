@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Register - The Bakery
+        </title>
+    </head>    
+    <body>
+        <a href="index.html">Back</a>
+        <form method="GET">
+        <label>First Name:</label>
+        <input type="text" name="firstName" required>
+        <br>
+        <label>Last Name:</label>
+        <input type="text" name="lastName" required>
+        <br>
+        <label>Email:</label>
+        <input type="email" name="email" required>
+        <br>
+        <label>Password:</label>
+        <input type="password" name="password" minlength="3" required>
+        <br>
+        <label>Birthday:</label>
+        <input type="date" name="birthday">
+        <br>
+        <label>Gender:</label>
+        <br>
+        <input type="radio" name="gender" value="Female" checked> Female 
+        <input type="radio" name="gender" value="Male"> Male
+        <br>
+        <label>Favorite Sweets:</label>
+        <br>
+        <input type="checkbox" name="checkbox" value="Donut"> Donut
+        <br>
+        <input type="checkbox" name="checkbox" value="Cinnabon"> Cinnabon
+        <br>
+        <input type="checkbox" name="checkbox" value="Sweet Bread"> Sweet Bread
+        <br>
+        <label>Select Your Location:</label>
+        <select name= "location">
+            <option value="North America">North America</option>
+            <option value="South America">South America</option>
+            <option value="Africa">Africa</option>
+            <option value="Antartica">Antartica</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania/Australia">Oceania/Australia</option>
+        </select>
+        <br>
+        <input type="submit" value="Register">
+        <input type="reset">
+        </form>
+    </body>
+</html>

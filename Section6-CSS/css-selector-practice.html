@@ -1,0 +1,55 @@
+<!DOCTYPE hmtl>
+<html>
+    <head>
+        <title>
+            CSS Selector Practice
+        </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="selector-practice.css">
+    </head>
+    <body>
+        <h1 style="text-align:center; color:deeppink">Understanding CSS Selectors</h1>
+        <h4 style="text-align:center; color: darkmagenta">6/17/19</h4>
+        <br>
+        <!--.class, >, #-->
+        <h3 class="group" id="newcolor">class grouping but using id</h3>
+        <h5 class="group">
+            <p id="specificity"> class grouping and id</p>
+        </h5>
+        <p class="group"> class grouping</p>
+
+        <!--space-->
+        <div>
+            This is div
+            <h1>Use space for h1 descendant</h1>
+        </div>
+        <!--+ Should only work for adjacents to the left-->
+        <!--ab, bc, cd, NOT others-->
+        <p class="a">Use + for sibling</p>
+        <p class="b">Use + for sibling</p>
+        <p class="c">Use + for sibling</p>
+        <p class="d">Use + for sibling</p>
+        <!--gt>-->
+        <section>
+            Section
+            <h3>
+                Use >
+            </h3>
+        </section>
+        <br>
+        <!--childs-->
+        <div id="div-st">
+            <p class="newrows">1</p>
+            <p class="newrows">2</p>
+            <p class="newrows">3</p>
+        </div>
+        
+        <div id="div-nd">
+            <p class="newrows">1</p>
+            <p class="newrows">2</p>
+            <p class="newrows">3</p>
+        </div>
+
+
+    </body>
+</html>

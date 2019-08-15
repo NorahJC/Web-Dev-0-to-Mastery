@@ -1,0 +1,116 @@
+/* default setting*/
+/* Special case? Though body successes *, * overrides 
+body's font family. AND * has lower specificity which 
+is another red flag. */
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    text-align: right;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* #id */
+#newcolor{
+    color: #C70039; 
+}
+
+/*.class */
+/*Try out !important so that the color remains grey on the last line*/
+/*Spec: 0,1,0*/
+.group{
+    color:grey;
+     /* color:grey !important; */
+}
+
+/* Hover to find that specificity(spec) is higher so it overrides the latter
+and former .group styles */
+/*Spec: 1,1,0*/
+.group > #specificity{
+    color: rgb(216, 85, 107);
+}
+
+/* overrides previous 1st copy .group color style due to cascading order (top-down) 
+unless you uncomment !important*/
+/*Spec:0,1,0*/
+.group{
+    /* comment color for grey */
+    color:rgba(24, 101, 201, 0.427);
+
+    text-align: center;
+}
+
+div  h1 {
+    text-align: center;
+    background-color: red;
+}
+
+p.a + p.b{
+    text-align: left;
+    background-color: blue;
+    color:white;
+}
+p.b + p.c{
+    text-align: left;
+    background-color: yellow;
+    color:purple;
+}
+
+/* Testing adjacency direction: to the right does not work */
+p.b + p.a{
+    text-align: left;
+    background-color: pink;
+}
+p.d + p.a{
+    text-align: left;
+    background-color: pink;
+}
+/* end */
+
+p.c + p.d{
+    text-align: left;
+    background-color: green;
+}
+/* > */
+section > h3 {
+    background-image: linear-gradient(#1fa540,#6bcee4);
+    text-align: center;
+}
+
+/* psuedo-element */
+p::before {
+    content: "Add before the tag's content: ";
+}
+
+/* comma, psuedo-class */
+#newcolor:hover, h1:hover, h3:hover {
+        cursor: progress;
+}
+
+/* psuedo-class */
+#div-st{
+    text-align: center;
+    background-color: rgba(151, 24, 201, 0.427)
+}
+#div-nd{
+    text-align: center;
+    background-color: rgba(24, 201, 154, 0.427)
+
+}
+.newrows:first-child{
+    display:block;
+    border: 4px dashed rgb(255, 0, 234);
+    text-align: left;
+
+}
+.newrows:last-child{
+
+    display:block;
+    border: 3px dashed rgb(224, 224, 19);
+    text-align: end;
+}
+.newrows:hover{
+    background-image: linear-gradient(#e0e013, #ff00ea);
+
+}
